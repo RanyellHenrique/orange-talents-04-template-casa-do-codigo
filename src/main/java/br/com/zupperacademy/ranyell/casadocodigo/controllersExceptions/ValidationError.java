@@ -2,19 +2,19 @@ package br.com.zupperacademy.ranyell.casadocodigo.controllersExceptions;
 
 public class ValidationError {
 
-    private String campo;
-    private String erro;
+    private String field;
+    private String message;
 
-    public ValidationError(String campo, String erro) {
-        this.campo = campo;
-        this.erro = erro;
+    public ValidationError(String field, String message) {
+        this.field = field;
+        this.message = message;
     }
 
-    public String getCampo() {
-        return campo;
+    public String getField() {
+        return field;
     }
-    public String getErro() {
-        return erro;
+    public String getMessage() {
+        return message;
     }
 
 }

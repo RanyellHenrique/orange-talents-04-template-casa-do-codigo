@@ -16,7 +16,7 @@ public class AutorPostDTO {
     @NotBlank @Length(max = 400)
     private String descricao;
 
-    public AutorPostDTO(String nome, String email, String descricao ) {
+    public AutorPostDTO(@NotBlank String nome, @Email @NotBlank String email,  @NotBlank @Length(max = 400)String descricao ) {
         this.nome = nome;
         this.email = email;
         this.descricao = descricao;
