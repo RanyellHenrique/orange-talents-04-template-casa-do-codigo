@@ -1,4 +1,4 @@
-package br.com.zupperacademy.ranyell.casadocodigo.controllersExceptions;
+package br.com.zupperacademy.ranyell.casadocodigo.utils;
 
 public class ValidationError {
 

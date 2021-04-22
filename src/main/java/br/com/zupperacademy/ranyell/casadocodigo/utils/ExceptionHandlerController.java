@@ -1,4 +1,4 @@
-package br.com.zupperacademy.ranyell.casadocodigo.controllersExceptions;
+package br.com.zupperacademy.ranyell.casadocodigo.utils;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.MessageSource;
