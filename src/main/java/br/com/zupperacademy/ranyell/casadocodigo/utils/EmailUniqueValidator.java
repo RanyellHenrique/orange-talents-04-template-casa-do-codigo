@@ -13,7 +13,7 @@ public class EmailUniqueValidator implements ConstraintValidator<EmailUniqueVali
 
     @PersistenceContext
     private EntityManager manager;
-    
+
     /*
     * Método responsável por verificar se o email é unico
     * @param value
