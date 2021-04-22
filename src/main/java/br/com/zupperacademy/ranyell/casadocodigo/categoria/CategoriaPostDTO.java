@@ -1,6 +1,6 @@
 package br.com.zupperacademy.ranyell.casadocodigo.categoria;
 
-import br.com.zupperacademy.ranyell.casadocodigo.utils.NomeUniqueValid;
+import br.com.zupperacademy.ranyell.casadocodigo.utils.UniqueValue;
 import com.fasterxml.jackson.annotation.JsonProperty;
 
 import javax.validation.constraints.NotBlank;
@@ -8,7 +8,7 @@ import javax.validation.constraints.NotBlank;
 public class CategoriaPostDTO {
 
     @NotBlank
-    @NomeUniqueValid(message = "Nome já existente")
+    @UniqueValue(classDomain = Categoria.class, fieldName = "nome")
     private String nome;
 
     public CategoriaPostDTO(@JsonProperty("nome") @NotBlank String nome) {

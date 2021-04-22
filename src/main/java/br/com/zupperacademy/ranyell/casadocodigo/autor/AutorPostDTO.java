@@ -1,6 +1,6 @@
 package br.com.zupperacademy.ranyell.casadocodigo.autor;
 
-import br.com.zupperacademy.ranyell.casadocodigo.utils.EmailUniqueValid;
+import br.com.zupperacademy.ranyell.casadocodigo.utils.UniqueValue;
 import org.hibernate.validator.constraints.Length;
 
 import javax.validation.constraints.Email;
@@ -11,7 +11,7 @@ public class AutorPostDTO {
     @NotBlank
     private String nome;
 
-    @EmailUniqueValid(message = "Email já existente")
+    @UniqueValue(classDomain = Autor.class, fieldName = "email")
     @Email @NotBlank
     private String email;
 

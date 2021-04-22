@@ -9,12 +9,13 @@ import java.lang.annotation.Target;
 
 @Target({ElementType.FIELD})
 @Retention(RetentionPolicy.RUNTIME)
-@Constraint(validatedBy = NomeUniqueValidator.class)
-public @interface NomeUniqueValid {
+@Constraint(validatedBy = UniqueValid.class)
+public @interface UniqueValue {
 
     String message() default "Valor inválido";
     Class<?>[] groups() default {};
     Class<? extends Payload>[] payload() default {};
-    String value() default "";
+    Class<?> classDomain();
+    String fieldName();
 }
 
