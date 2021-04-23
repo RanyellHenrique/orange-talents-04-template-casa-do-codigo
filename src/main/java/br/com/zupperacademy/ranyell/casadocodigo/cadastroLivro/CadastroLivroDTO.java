@@ -1,7 +1,7 @@
-package br.com.zupperacademy.ranyell.casadocodigo.livro;
+package br.com.zupperacademy.ranyell.casadocodigo.cadastroLivro;
 
-import br.com.zupperacademy.ranyell.casadocodigo.autor.Autor;
-import br.com.zupperacademy.ranyell.casadocodigo.categoria.Categoria;
+import br.com.zupperacademy.ranyell.casadocodigo.cadastroAutor.Autor;
+import br.com.zupperacademy.ranyell.casadocodigo.cadastroCategoria.Categoria;
 import br.com.zupperacademy.ranyell.casadocodigo.utils.ExistValue;
 import br.com.zupperacademy.ranyell.casadocodigo.utils.UniqueValue;
 import com.fasterxml.jackson.annotation.JsonFormat;
@@ -11,7 +11,7 @@ import javax.validation.constraints.*;
 import java.math.BigDecimal;
 import java.time.Instant;
 
-public class LivroPostDTO {
+public class CadastroLivroDTO {
 
     @NotBlank
     @UniqueValue(fieldName = "titulo", classDomain = Livro.class)
@@ -40,8 +40,8 @@ public class LivroPostDTO {
     @ExistValue(classDomain = Categoria.class, fieldName = "id")
     private Long categoriaId;
 
-    public LivroPostDTO(String titulo, String resumo, String sumario, BigDecimal preco, Integer paginas, String isbn,
-                        Instant dataPublicacao, Long autorId, Long categoriaId) {
+    public CadastroLivroDTO(String titulo, String resumo, String sumario, BigDecimal preco, Integer paginas, String isbn,
+                            Instant dataPublicacao, Long autorId, Long categoriaId) {
         this.titulo = titulo;
         this.resumo = resumo;
         this.sumario = sumario;

@@ -1,4 +1,4 @@
-package br.com.zupperacademy.ranyell.casadocodigo.categoria;
+package br.com.zupperacademy.ranyell.casadocodigo.cadastroCategoria;
 
 import br.com.zupperacademy.ranyell.casadocodigo.utils.UniqueValue;
 import com.fasterxml.jackson.annotation.JsonProperty;

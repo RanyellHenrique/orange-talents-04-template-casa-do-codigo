@@ -1,4 +1,4 @@
-package br.com.zupperacademy.ranyell.casadocodigo.categoria;
+package br.com.zupperacademy.ranyell.casadocodigo.cadastroCategoria;
 
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.PostMapping;

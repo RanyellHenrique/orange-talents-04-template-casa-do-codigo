@@ -1,4 +1,4 @@
-package br.com.zupperacademy.ranyell.casadocodigo.autor;
+package br.com.zupperacademy.ranyell.casadocodigo.cadastroAutor;
 
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;

@@ -1,8 +1,7 @@
-package br.com.zupperacademy.ranyell.casadocodigo.livro;
+package br.com.zupperacademy.ranyell.casadocodigo.cadastroLivro;
 
-import br.com.zupperacademy.ranyell.casadocodigo.autor.Autor;
-import br.com.zupperacademy.ranyell.casadocodigo.categoria.Categoria;
-import br.com.zupperacademy.ranyell.casadocodigo.utils.UniqueValue;
+import br.com.zupperacademy.ranyell.casadocodigo.cadastroAutor.Autor;
+import br.com.zupperacademy.ranyell.casadocodigo.cadastroCategoria.Categoria;
 
 import javax.persistence.*;
 import javax.validation.constraints.*;
@@ -73,5 +72,37 @@ public class Livro {
                 ", categoria=" + categoria +
                 ", autor=" + autor +
                 '}';
+    }
+
+    public String getTitulo() {
+        return titulo;
+    }
+
+    public String getResumo() {
+        return resumo;
+    }
+
+    public String getSumario() {
+        return sumario;
+    }
+
+    public BigDecimal getPreco() {
+        return preco;
+    }
+
+    public Integer getPaginas() {
+        return paginas;
+    }
+
+    public String getIsbn() {
+        return isbn;
+    }
+
+    public Instant getDataPublicacao() {
+        return dataPublicacao;
+    }
+
+    public Autor getAutor() {
+        return autor;
     }
 }

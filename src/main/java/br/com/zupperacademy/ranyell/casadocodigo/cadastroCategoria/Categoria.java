@@ -1,4 +1,4 @@
-package br.com.zupperacademy.ranyell.casadocodigo.categoria;
+package br.com.zupperacademy.ranyell.casadocodigo.cadastroCategoria;
 
 import javax.persistence.*;
 import javax.validation.constraints.NotBlank;

@@ -1,4 +1,4 @@
-package br.com.zupperacademy.ranyell.casadocodigo.autor;
+package br.com.zupperacademy.ranyell.casadocodigo.cadastroAutor;
 
 
 import javax.persistence.*;
@@ -45,5 +45,13 @@ public class Autor {
                 ", descricao='" + descricao + '\'' +
                 ", instanteDeCadastro=" + instanteDeCadastro +
                 '}';
+    }
+
+    public String getNome() {
+        return nome;
+    }
+
+    public String getDescricao() {
+        return descricao;
     }
 }

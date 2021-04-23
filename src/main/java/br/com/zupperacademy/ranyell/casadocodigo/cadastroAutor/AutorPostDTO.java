@@ -1,4 +1,4 @@
-package br.com.zupperacademy.ranyell.casadocodigo.autor;
+package br.com.zupperacademy.ranyell.casadocodigo.cadastroAutor;
 
 import br.com.zupperacademy.ranyell.casadocodigo.utils.UniqueValue;
 import org.hibernate.validator.constraints.Length;
