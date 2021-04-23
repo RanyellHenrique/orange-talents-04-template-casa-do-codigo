@@ -4,6 +4,7 @@ import br.com.zupperacademy.ranyell.casadocodigo.autor.Autor;
 import br.com.zupperacademy.ranyell.casadocodigo.categoria.Categoria;
 import br.com.zupperacademy.ranyell.casadocodigo.utils.ExistValue;
 import br.com.zupperacademy.ranyell.casadocodigo.utils.UniqueValue;
+import com.fasterxml.jackson.annotation.JsonFormat;
 
 import javax.persistence.EntityManager;
 import javax.validation.constraints.*;
@@ -29,6 +30,8 @@ public class LivroPostDTO {
     @UniqueValue(fieldName = "isbn", classDomain = Livro.class)
     private String isbn;
     @Future
+    @NotNull
+    @JsonFormat(shape=JsonFormat.Shape.STRING, pattern="yyyy-MM-dd'T'HH:mm:ss.SSSZ", timezone = JsonFormat.DEFAULT_TIMEZONE)
     private Instant dataPublicacao;
     @NotNull
     @ExistValue(classDomain = Autor.class, fieldName = "id")
@@ -51,8 +54,8 @@ public class LivroPostDTO {
     }
 
     public Livro toModel(EntityManager manager) {
-        Autor autor = manager.find(Autor.class, autorId);
-        Categoria categoria = manager.find(Categoria.class, categoriaId);
+        @NotNull Autor autor = manager.find(Autor.class, autorId);
+        @NotNull Categoria categoria = manager.find(Categoria.class, categoriaId);
         return new Livro(titulo, resumo, sumario, preco, paginas, isbn, dataPublicacao,  categoria, autor);
     }
 }

@@ -2,12 +2,10 @@ package br.com.zupperacademy.ranyell.casadocodigo.livro;
 
 import br.com.zupperacademy.ranyell.casadocodigo.autor.Autor;
 import br.com.zupperacademy.ranyell.casadocodigo.categoria.Categoria;
+import br.com.zupperacademy.ranyell.casadocodigo.utils.UniqueValue;
 
 import javax.persistence.*;
-import javax.validation.constraints.Min;
-import javax.validation.constraints.NotBlank;
-import javax.validation.constraints.NotNull;
-import javax.validation.constraints.Size;
+import javax.validation.constraints.*;
 import java.math.BigDecimal;
 import java.time.Instant;
 
@@ -18,18 +16,31 @@ public class Livro {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
     @Column(unique = true)
+    @NotBlank
     private  String titulo;
+    @NotBlank
+    @Size(max = 500)
     private String resumo;
+    @NotBlank
     private String sumario;
+    @NotNull
+    @DecimalMin("20.0")
     private BigDecimal preco;
+    @NotNull
+    @Min(100)
     private Integer paginas;
     @Column(unique = true)
+    @NotBlank
     private String isbn;
+    @NotNull
+    @Future
     private Instant dataPublicacao;
 
+    @NotNull
     @ManyToOne
     private Categoria categoria;
 
+    @NotNull
     @ManyToOne
     private Autor autor;
 
