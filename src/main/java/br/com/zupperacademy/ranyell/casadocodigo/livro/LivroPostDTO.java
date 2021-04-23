@@ -58,4 +58,6 @@ public class LivroPostDTO {
         @NotNull Categoria categoria = manager.find(Categoria.class, categoriaId);
         return new Livro(titulo, resumo, sumario, preco, paginas, isbn, dataPublicacao,  categoria, autor);
     }
+
+
 }

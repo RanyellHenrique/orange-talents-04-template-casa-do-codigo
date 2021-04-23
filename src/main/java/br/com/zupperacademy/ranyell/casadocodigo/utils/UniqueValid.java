@@ -24,7 +24,7 @@ public class UniqueValid implements ConstraintValidator<UniqueValue, Object> {
     }
 
     /*
-    * Método responsável por verificar se o atributo é existe no banco de dados
+    * Método responsável por verificar se o atributo é único no banco de dados
     * @param value
     * @param context
     */

@@ -22,6 +22,12 @@ public class ExistValid implements ConstraintValidator<ExistValue, Object> {
         this.fieldName = constraintAnnotation.fieldName();
     }
 
+    /*
+     * Método responsável por verificar se o atributo é existe no banco de dados
+     * @param value
+     * @param context
+     */
+
     @Override
     public boolean isValid(Object value, ConstraintValidatorContext context) {
         Query query = manager.createQuery("select 1 from "+classDomain.getSimpleName()+ " where "+fieldName+ " = :value");
