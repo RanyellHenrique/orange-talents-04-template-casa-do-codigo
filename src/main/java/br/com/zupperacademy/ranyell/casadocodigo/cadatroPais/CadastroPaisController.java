@@ -1,4 +1,4 @@
-package br.com.zupperacademy.ranyell.casadocodigo.cadastroAutor;
+package br.com.zupperacademy.ranyell.casadocodigo.cadatroPais;
 
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -12,17 +12,18 @@ import javax.transaction.Transactional;
 import javax.validation.Valid;
 
 @RestController
-@RequestMapping("/autores")
-public class AutorController {
+@RequestMapping("/paises")
+public class CadastroPaisController {
 
     @PersistenceContext
     private EntityManager manager;
 
     @PostMapping
     @Transactional
-    public ResponseEntity<String> insert(@Valid @RequestBody AutorPostDTO dto) {
-        Autor autor = dto.toModel();
-        manager.persist(autor);
-        return ResponseEntity.ok().body(autor.toString());
+    public ResponseEntity<String> insert(@Valid @RequestBody CadastroPaisDTO dto) {
+        Pais pais = dto.toModel();
+        manager.persist(pais);
+        return ResponseEntity.ok().body(pais.toString());
     }
+
 }
